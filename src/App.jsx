@@ -25,18 +25,21 @@ export default function App() {
   return (
     <>
       <Section
+        className='general-section'
         name='General Information'
         inputNames={['Name', 'Email', 'Phone Number']}
         stateValues={inputValues}
         handleInput={handleInputChange}
         />
       <Section
+        className='education-section'
         name='Education'
         inputNames={['School Name', 'Field of Study', 'Date Attended']}
         stateValues={inputValues}
         handleInput={handleInputChange}
         />
       <Section
+        className='experience-section'
         name='Experience'
         inputNames={['Company Name', 'Position in Organization', 'Responsibilities']}
         stateValues={inputValues}
