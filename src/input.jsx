@@ -1,7 +1,6 @@
 import { useState } from 'react'
 
-export function Input({ name }) {
-    const [input, setInput] = useState('');
+export function Input({ name, value, handleFunction }) {
     const [isEditing, setIsEditing] = useState(true);
     return (
         <form className='input-form' onSubmit={e => {
@@ -12,11 +11,12 @@ export function Input({ name }) {
                 {name}: {' '}
                 {isEditing ? (
                     <input
-                        value={input}
-                        onChange={e => setInput(e.target.value)}
+                        className='input-text'
+                        value={value}
+                        onChange={e => handleFunction(e.target.value, name)}
                         />
                 ) : (
-                    <b>{input}</b>
+                    <b>{value}</b>
                 )}
             </label>
                 <button className='input-btn' type='submit'>
