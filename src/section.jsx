@@ -3,12 +3,12 @@ import { Input } from './input.jsx'
 
 function makeInputs(inputNames, stateValues, handleInput) {
     return inputNames.map((inputName, index) => (
-      <Input
-        key={index}
-        name={inputName}
-        value={stateValues[inputName]}
-        handleFunction={handleInput}
-      />
+        <Input
+            key={index}
+            name={inputName}
+            value={stateValues[inputName]}
+            handleFunction={handleInput}
+        />
     ));
   }
 
